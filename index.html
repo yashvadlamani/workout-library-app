@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workout library</title>
+  <meta name="description" content="50 workouts grouped by primary muscle, each with a form tutorial video.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Workout library</h1>
+    <input id="search" type="search" placeholder="Romanian deadlift" aria-label="Search workouts">
+  </header>
+
+  <main>
+    <nav id="groups" class="chips" aria-label="Muscle groups"></nav>
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <dialog id="detail" aria-labelledby="detail-name">
+    <div class="detail-head">
+      <h2 id="detail-name"></h2>
+      <button id="detail-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="video"><iframe id="detail-video" title="Tutorial video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <dl id="detail-facts" class="facts"></dl>
+    <p class="credit"><span id="detail-credit"></span> <a id="detail-link" target="_blank" rel="noopener">Watch on YouTube</a></p>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
